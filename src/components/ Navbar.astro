@@ -3,11 +3,13 @@ import '../styles/navbar.css';
 import githubIcon from '../assets/github.png';
 import gmailIcon from '../assets/gmail.png';
 import linkedinIcon from '../assets/linkedin.png';
+import hamburgerIcon from '../assets/hamburgerIcon.png';
 ---
 
 <div class="navbar">
     <div class="navbar-inner max-width">
-        <input class="navbar-hamburger" type="checkbox">
+        <label for="hamburger"><img src={hamburgerIcon.src}></label>
+        <input id="hamburger" class="navbar-hamburger" type="checkbox">
         <div class="navbar-title-container">
             <a class="navbar-title" href="/">salivio.johann</a>
         </div>
@@ -17,13 +19,13 @@ import linkedinIcon from '../assets/linkedin.png';
             <a class="navbar-link" href="/projects">projects</a>
         </div>
         <div class="navbar-socials">
-            <a class="navbar-social" href="https://github.com/Makoch1">
+            <a class="navbar-social" href="https://github.com/Makoch1" target="_blank">
                 <img src={githubIcon.src} alt="github-logo">
             </a>
-            <a class="navbar-social" href="mailto:saliviojohann@gmail.com">
+            <a class="navbar-social" href="mailto:saliviojohann@gmail.com" target="_blank">
                 <img src={gmailIcon.src} alt="gmail-logo">
             </a>
-            <a class="navbar-social" href="https://www.linkedin.com/in/johann-salivio-3b0a51299/">
+            <a class="navbar-social" href="https://www.linkedin.com/in/johann-salivio-3b0a51299/" target="_blank">
                 <img src={linkedinIcon.src} alt="linkedin-logo">
             </a>
         </div>
