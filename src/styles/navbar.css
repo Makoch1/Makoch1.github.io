@@ -1,8 +1,9 @@
 .navbar {
+    background: white;
     border: solid black;
     border-width: 3px 0;
     width: 100%;
-    position: sticky;
+    position: fixed;
 
     a {
         color: inherit;
