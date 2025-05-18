@@ -1,0 +1,113 @@
+.about {
+    height: 60dvh;
+    padding-top: 6rem;
+}
+
+.about-inner {
+    background: #023C40;
+    color: white;
+    display: flex;
+    height: 100%;
+}
+
+.about-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: auto 0.5rem;
+    justify-content: center;
+
+    h1 {
+        font-size: 2.9rem;
+        margin: 0 2rem;
+        text-wrap: nowrap;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 100;
+        margin: 0;
+    }
+
+    p {
+        border: 1px solid white;
+        font-weight: 100;
+        line-height: 1.2rem;
+        margin: 1.2rem auto;
+        padding: 0.5rem;
+        width: 90%;
+    }
+
+    .about-ctas {
+        display: flex;
+        gap: 1rem;
+
+        a {
+            border-bottom: 2px solid white;
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                background: white;
+                color: #023C40;
+                transition: 0.3s ease all;
+            }
+        }
+
+        a:nth-child(2) {
+            border-color: #bfbfbf;
+            color: #bfbfbf;
+        }
+    }
+
+}
+
+.about-right {
+    display: none;
+}
+
+@media only screen and (min-width: 720px) {
+    .about-left {
+        margin: auto 2rem;
+
+        h1 {
+            font-size: 6rem;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            line-height: 1.2rem;
+            margin: 1.2rem 0;
+            width: 60%;
+        }
+    }
+
+    .about-right {
+        display: block;
+        padding: 0.5rem;
+
+        a {
+            border: 1px solid white;
+            box-sizing: border-box;
+            color: white;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            writing-mode: sideways-lr;
+            padding: 3px;
+            text-decoration: none;
+
+            &:hover {
+                background: white;
+                color: #023C40;
+                cursor: pointer;
+
+                transition: 0.2s ease all;
+            }
+        }
+    }
+
+}
