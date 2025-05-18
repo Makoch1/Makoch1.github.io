@@ -1,12 +1,10 @@
 .ribbon {
-    background: #a52422;
     padding: 0.5rem 0;
     overflow: hidden;
     white-space: nowrap;
 }
 
 .ribbon-text {
-    color: white;
     display: inline-block;
     font-size: 3.5rem;
     font-weight: 900;

@@ -1,0 +1,20 @@
+---
+const { data } = Astro.props;
+---
+
+<div id={`project-${data.name}`} class="projects-project">
+    <img src={data.imgSrc}>
+    <div class="project-inner">
+        <p class="project-title">{data.name}</p>
+        <p class="project-description">
+            {data.description}
+        </p>
+    </div>
+    <div class="project-tags">
+        <div class="project-links">
+            <a href={data.gitRepo} target="_blank">Link to the repository</a>
+            <a href={data.link} target="_blank">Visit the site</a>
+        </div>
+        {data.tags.map(tag => <p class="project-tag">{tag}</p>)}
+    </div>
+</div>

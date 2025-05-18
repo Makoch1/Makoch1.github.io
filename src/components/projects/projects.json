@@ -1,0 +1,26 @@
+[
+    {
+        "name": "8-Puzzle",
+        "description": "A web-app implementation of the 8-puzzle game, created primarily as a practice project to improve my React and Typescript skills. Built with React, Vite, and Tanstack Router, this app helped me familiarize myself with the technologies used.",
+        "gitRepo": "https://github.com/Makoch1/8-puzzle.web.app",
+        "link": "",
+        "tags": ["React", "Typescript", "TanStack Router"],
+        "imgSrc": "src/assets/projects/8puzzle.png"
+    },
+    {
+        "name": "What.Can.I.Make.With",
+        "description": "A recipe web-app designed to maximize ingredient usage by leveraging the Spoonacular API. Users can input the ingredients they have on hand, and the app suggests recipes that make the most out of what's available. ",
+        "gitRepo": "https://github.com/Makoch1/whatcanimakewith.web.app",
+        "link": "https://what-can-i-make-with.web.app/",
+        "tags": ["React", "Typescript", "NestJS"],
+        "imgSrc": "src/assets/projects/whatcanimakewith.png"
+    },
+    {
+        "name": "tabLock",
+        "description": "A productivity-focused web extension that helps users manage their online habits. TabLock allows users to 'lock' specific websites, restricting access to a set number of sessions and minutes per day. Designed to limit distractions in daily life, and has helped in personally improved my own focus and productivity.",
+        "gitRepo": "",
+        "link": "",
+        "tags": ["WXT", "Typescript", "CSS"],
+        "imgSrc": "src/assets/projects/tablock.png"
+    }
+]

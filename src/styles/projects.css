@@ -1,0 +1,128 @@
+:root {
+    --purple: #7D4B81;
+}
+
+.projects {
+    margin: 5rem 0;
+    min-height: 100dvh;
+}
+
+.projects-main {
+    display: flex;
+    margin-top: 5rem;
+}
+
+.projects-list {
+
+    /* remove the top border, except for the first button */
+    .projects-btn:not(:first-child) {
+        border-top: 0;
+    }
+
+    .projects-btn {
+        background: white;
+        border: 1px solid black;
+        border-right: 0;
+        bottom: 0;
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin: 0;
+        padding: 2rem 1rem;
+        left: 0;
+        text-transform: uppercase;
+
+        &.active,
+        &:hover {
+            border: 1px solid black;
+            cursor: pointer;
+            bottom: 8px;
+            box-shadow: -10px 10px var(--purple);
+            position: relative;
+            left: 10px;
+
+            transition: 0.3s ease-out all;
+        }
+    }
+}
+
+.projects-project:hover .project-inner,
+.projects-project:hover .project-tag {
+    background: var(--purple);
+    color: white;
+    transition: 0.2s ease all;
+}
+
+.projects-project {
+    display: none;
+    flex-direction: column;
+
+    img {
+        border: 1px solid black;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .project-inner {
+        border: 1px solid black;
+        border-top: 0;
+    }
+
+    .project-title {
+        flex: 1;
+        font-size: 3rem;
+        font-weight: 600;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .project-links {
+        display: flex;
+        gap: 1px;
+        margin-right: auto;
+
+        a {
+            background: black;
+            box-sizing: border-box;
+            color: white;
+            flex: 1;
+            font-size: 1.2rem;
+            height: fit-content;
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            text-decoration: none;
+            text-wrap: nowrap;
+        }
+
+        a:hover {
+            background: var(--purple);
+            border-color: var(--purple);
+            color: white;
+            transition: 0.3s ease all;
+        }
+    }
+
+    .project-description {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .project-tags {
+        display: flex;
+        justify-content: flex-end;
+
+        .project-tag:not(:nth-child(2)) {
+            border-left: 0;
+        }
+
+        .project-tag {
+            border: 1px solid black;
+            border-top: 0;
+            margin: 0;
+            padding: 1rem;
+        }
+    }
+}
