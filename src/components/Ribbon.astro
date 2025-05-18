@@ -1,0 +1,10 @@
+---
+import '../styles/ribbon.css';
+
+const { text } = Astro.props;
+const texts = Array(15).fill(text);
+---
+
+<div class="ribbon">
+    {texts.map(t => <span class="ribbon-text" aria-hidden="true">{t}</span>)}
+</div>
