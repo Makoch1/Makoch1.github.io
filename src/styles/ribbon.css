@@ -1,0 +1,29 @@
+.ribbon {
+    background: #a52422;
+    padding: 0.5rem 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ribbon-text {
+    color: white;
+    display: inline-block;
+    font-size: 3.5rem;
+    font-weight: 900;
+    padding-right: 4rem;
+    animation: scroll 2s linear infinite;
+}
+
+.ribbon:hover .ribbon-text {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}

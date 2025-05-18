@@ -1,0 +1,79 @@
+.skills {
+    margin-top: 5rem;
+    height: 100dvh;
+}
+
+.skills-header {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 0 0.5rem;
+    margin-top: 3rem;
+    text-wrap: pretty;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    row-gap: 1rem;
+}
+
+@media only screen and (min-width: 720px) {
+    .skills-header {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin: 0 auto;
+        margin-top: 5rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(3, 30%);
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .skills-list {
+        grid-template-columns: repeat(4, 25%);
+    }
+}
+
+.skills-card {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    max-width: 280px;
+
+    img {
+        flex: 1;
+        object-fit: contain;
+        padding: 1rem;
+    }
+
+    p {
+        border-top: 2px solid black;
+        font-weight: 600;
+        margin: 0;
+        padding: 0.8rem 0;
+        text-align: center;
+    }
+
+    &:hover p,
+    &:focus p,
+    &:focus-within p {
+
+        &.proficient {
+            background: #023C40;
+            color: white;
+        }
+
+        &.somewhat {
+            background: #F9C22E;
+        }
+
+        &.dabbled {
+            background: #A52422;
+            color: white;
+        }
+    }
+}

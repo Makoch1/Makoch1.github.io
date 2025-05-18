@@ -1,0 +1,49 @@
+---
+/*
+<script> */
+    import '../styles/skills.css';
+    import Ribbon from './Ribbon.astro';
+
+    const iconMatches = import.meta.glob('../assets/skills-icons/*.png', {eager: true});
+
+    const icons = Object.values(iconMatches).map((iconMatch, index) => {
+        const filepath = iconMatch.default.src;
+        const name = filepath
+            .split('/').at(-1)
+            .split('.png').at(0)
+            .replace(/[0-9]/g, '');
+
+        const getLevel = () => {
+            if (index < 6) {
+                return 'proficient';
+            } else if (index < 11) {
+                return 'somewhat';
+            } else {
+                return 'dabbled';
+            }
+        };
+
+        return {
+            name: name,
+            src: filepath,
+            level: getLevel()
+        };
+    })
+//</script>
+
+---
+<div class="skills" id="skills">
+    <Ribbon text="Skills" />
+    <h1 class="skills-header max-width">
+        The technologies listed below are arranged in order of proficiency &#x2015; from those I’m most experienced
+        with &#x2015; to those I’ve explored and am eager to learn more about.
+    </h1>
+    <div class="skills-list max-width">
+        {icons.map(icon =>
+        <div class="skills-card">
+            <img src={icon.src} />
+            <p class={icon.level}>{icon.name}</p>
+        </div>
+        )}
+    </div>
+</div>
