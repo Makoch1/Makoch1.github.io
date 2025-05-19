@@ -3,7 +3,7 @@
         "name": "8-Puzzle",
         "description": "A web-app implementation of the 8-puzzle game, created primarily as a practice project to improve my React and Typescript skills. Built with React, Vite, and Tanstack Router, this app helped me familiarize myself with the technologies used.",
         "gitRepo": "https://github.com/Makoch1/8-puzzle.web.app",
-        "link": "",
+        "link": "https://eight-puzzle-7f499.web.app/puzzle/",
         "tags": ["React", "Typescript", "TanStack Router"],
         "imgSrc": "src/assets/projects/8puzzle.png"
     },
@@ -18,8 +18,8 @@
     {
         "name": "tabLock",
         "description": "A productivity-focused web extension that helps users manage their online habits. TabLock allows users to 'lock' specific websites, restricting access to a set number of sessions and minutes per day. Designed to limit distractions in daily life, and has helped in personally improved my own focus and productivity.",
-        "gitRepo": "",
-        "link": "",
+        "gitRepo": "https://github.com/Makoch1/tab-lock",
+        "link": "https://github.com/Makoch1/tab-lock/blob/master/README.md",
         "tags": ["WXT", "Typescript", "CSS"],
         "imgSrc": "src/assets/projects/tablock.png"
     }
