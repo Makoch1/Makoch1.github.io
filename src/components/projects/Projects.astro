@@ -3,6 +3,20 @@ import '../../styles/projects.css';
 import Ribbon from '../Ribbon.astro';
 import Project from './Project.astro';
 import projects from './projects.json';
+
+// attach the imgSrcs
+const iconMatches = import.meta.glob('../../assets/projects/*.png', {eager: true});
+
+for (const match of Object.values(iconMatches)) {
+    const filepath = match.default.src;
+    const filename = filepath
+        .split('/').at(-1)
+        .split('.').at(0)
+        .toLowerCase();
+
+    projects[filename].imgSrc = filepath;
+}
+
 ---
 
 <div class="projects" id="projects">
@@ -10,9 +24,9 @@ import projects from './projects.json';
 
     <div class="projects-main max-width">
         <div class="projects-list">
-            {projects.map(project => <p class="projects-btn" id={project.name}>{project.name}</p>)}
+            {Object.values(projects).map(project => <p class="projects-btn" id={project.name}>{project.name}</p>)}
         </div>
-        {projects.map(project =>
+        {Object.values(projects).map(project =>
         <Project data={project} />)}
     </div>
 
