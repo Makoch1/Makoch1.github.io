@@ -10,7 +10,7 @@
         const filepath = iconMatch.default.src;
         const name = filepath
             .split('/').at(-1)
-            .split('.png').at(0)
+            .split('.').at(0)
             .replace(/[0-9]/g, '');
 
         const getLevel = () => {
